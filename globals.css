@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 245 247 250;
+  --surface: 255 255 255;
+  --surface-2: 248 249 252;
+  --border: 226 230 237;
+  --ink: 18 23 43;
+  --muted: 100 108 128;
+  --brand: 30 58 95;
+  --brand-light: 59 110 165;
+  --brand-dark: 15 33 56;
+  --amber: 217 138 15;
+  --success: 22 130 90;
+  --danger: 214 62 67;
+  --info: 43 99 191;
+}
+
+.dark {
+  --bg: 9 13 24;
+  --surface: 17 24 39;
+  --surface-2: 22 30 48;
+  --border: 34 44 64;
+  --ink: 230 233 243;
+  --muted: 148 158 179;
+  --brand: 89 140 197;
+  --brand-light: 122 168 219;
+  --brand-dark: 15 33 56;
+  --amber: 245 166 35;
+  --success: 52 191 138;
+  --danger: 240 100 104;
+  --info: 96 148 235;
+}
+
+* {
+  border-color: rgb(var(--border));
+}
+
+html,
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--ink));
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--border));
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--muted));
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
